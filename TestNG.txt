@@ -1,0 +1,179 @@
+TestNG:
+
+@Test annotation is used to execute the test case
+If we have 2 @Test annotation in a class file then by default it will be executed in the alphabetical order within the class file
+
+To create testng.xml file, right click the project, select TestNG->Convert to TestNG option.
+
+XML hierarchy:
+	Test Suite
+		Test Folder/Test
+			Classes
+				Class
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="day1">
+    <classes>
+      <class name="com.testng.testngBasics"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="day2">
+    <classes>
+      <class name="com.testng.login">
+		<methods>
+			<exclude name="MobileLogin"/>
+		</methods>
+	  </class>
+      <class name="com.testng.home">
+		<methods>
+			<include name="MobileHome"/>
+		</methods>
+	  </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+Include/Exclude are used to control the test cases that we need to execute within the same class
+
+      <class name="com.testng.login">
+		<methods>
+			<exclude name="Mobile.*"/> //excludes only the defined test case and executes the rest of the methods in the class
+		</methods>
+	  </class>
+      <class name="com.testng.home">
+		<methods>
+			<include name="Mobile.*"/> // includes only the methods defined here for execute, the rest of the methods are ignored
+		</methods>
+	  </class>
+
+We can use regular expression with include/exclude multiple test methods which satisfy the regex criteria
+
+To execute the test cases at package level use the following,
+	<suite name="Suite">
+	  <test thread-count="5" name="day1">
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->
+	</suite> <!-- Suite -->
+	
+@BeforeTest - Scope is restricted to the particular test method/methods
+@AfterTest - Scope is restricted to the particular test method/methods
+@BeforeSuite - Scope is restricted to the entire test suite
+@AfterSuite - Scope is restricted to the entire test suite
+@BeforeClass - Scope is restricted to the particular class file
+@AfterClass - Scope is restricted to the particular class file
+
+These annotations are used to handle the prerequisites and cleanups before and after running the test case. This is where the driver object and result report objects will be initialized and closed
+
+When we are using groups, 
+If we are using include, then the before and after annotations will not be executed.
+If we are using exclude, then the before and after annotations will be executed.
+	<suite name="Suite">
+	  <test thread-count="5" name="Smoke">
+		<groups>
+			<run>
+				<include name="Smoke"/>
+			</run>
+		</groups>
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->	  
+	  <test thread-count="5" name="Functional">
+		<groups>
+			<run>
+				<exclude name="Regression"/>
+			</run>
+		</groups>
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->
+	</suite> <!-- Suite -->
+	
+dependsOnMethods attribute is used to add the preceding test case given in the attribute to be executed prior to this method/methods
+	@Test(dependsOnMethods= {"MobileLogin"})
+	public void MobileHome()
+	{
+		System.out.println("inside MobileHome");		
+	}
+	
+enabled attribute is used to make a particular test method visible or invisible to the testng executor. By default all the tests will have enabled = true. We need to set it to false to omit a particular test case.
+	@Test(enabled=false)
+	public void Bye()
+	{
+		System.out.println("Bye");
+	}
+	
+timeout attribute is used to make the executor wait for the mentioned amount of time. Time is given in milliseconds.
+	@Test(groups= {"Smoke"},timeOut=4000)
+	public void Demo()
+	{
+		System.out.println("Hello");
+	}
+
+Parameterization:
+Parameter tag is used to share the test data in the TestNG XML file. It accepts two attributes, name and value.
+
+It can be provided at suite level or at test level.
+	Suite Level:
+	<suite name="Suite">
+	  <parameter name="URL" value="https://www.yahoo.com"/>
+	  <test thread-count="5" name="Smoke">
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->
+	</suite> <!-- Suite -->
+	
+	Test Level:
+	<suite name="Suite">
+	  <test thread-count="5" name="Web">		
+		<parameter name="URL" value="https://www.yahoo.com"/>
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->	  
+	  <test thread-count="5" name="Mobile">		
+		<parameter name="URL" value="https://m.yahoo.com"/>
+		<packages>
+			<package name="com.testng" />		
+		</packages>
+	  </test> <!-- Test -->
+	</suite> <!-- Suite -->
+
+To access the parameters from the test, we use the @Parameters annotation
+	@Parameters({"APIURL","APIUserName","APIPAssword"})	
+	@Test
+	public void APILogin(String URLName, String Username, String Password)
+	{
+		System.out.println("inside APILogin");		
+		System.out.println(URLName);	
+		System.out.println(Username);	
+		System.out.println(Password);
+	}
+
+@DataProvider annotation is used to mark a method as the test data provider for the tests at hand.
+	@DataProvider
+	public Object[][] getCredentials()
+	{
+		Object[][] data= new Object[3][2];
+		data[0][0]="firstusername";
+		data[0][1]="firstpassword";
+		data[1][0]="secondusername";
+		data[1][1]="secondtpassword";
+		data[2][0]="thirdusername";
+		data[2][1]="thirdpassword";
+		return data;
+	}
+	
+	@Test(dataProvider="getCredentials")
+	public void test(String username, String password)
+	{
+		System.out.println(username);
+		System.out.println(password);
+	}

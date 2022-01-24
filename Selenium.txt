@@ -1,0 +1,212 @@
+One advantage of Page Factory is that it has AjaxElementLocatorFactory class which helps in lazy load or in aother owrds handling ajax objects
+
+Expected Conditions:
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+@FindBy(xpath="<xpath>") WebElement xyz;
+(or)
+By xyz=By.xpath("<xpath>");
+
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
+
+driver.manage().window().maximize();
+driver.manage().window().setSize(new Dimension(1366,768));
+driver.manage().deleteAllCookies();
+driver.Manage().Cookies.DeleteAllCookies();
+driver.manage().timeOuts().implicitlyWait(20, TimeUnit.SECONDS);
+driver.get("https://www.google.com");
+driver.getCurrentUrl();
+driver.navigate().to(driver.getCurrentUrl());
+driver.navigate().to(url);
+driver.navigate().forward();
+driver.navigate().back();
+driver.navigate().refresh();
+driver.switchTo().frame();
+driver.switchTo().defaultContent();
+Alert alert = driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+String str=alert.getText();
+alert.sendKeys("abc");
+
+#How to login to any site if it is showing an Authentication Pop-Up for Username and Password?
+WebDriverWait wait = new WebDriverWait(driver, 10);
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+alert.authenticateUsing(new UserAndPassword(<username>, <password>));
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,250)", "");
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+Code to highlight:
+JavascriptExecutor js = (JavascriptExecutor) driver;
+        //use executeScript() method and pass the arguments 
+        //Here i pass values based on css style. Yellow background color with solid red color border. 
+ js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ele);
+ 
+Context click:
+WebElement rightClickElement=driver.findElement(locator);
+//contextClick() method to do right click on the element
+action.contextClick(rightClickElement).build().perform();
+action.doubleClick(ele).build().perform();
+action.dragAndDrop(sourceLocator, targetLocator).build().perform();
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class BrowserOperations {
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver";,
+        "/path/to/chromedriver");
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("window-size=800,480");
+
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setCapability(ChromeOptions.CAPABILITY, options);
+
+        //this will open chrome with set size
+        WebDriver driver = new ChromeDriver(capabilities);
+
+        driver.get("https://www.testingexcellence.com/");
+    }
+}
+
+WebDriverWait wait=new WebDriverWait(driver,20);
+wait.until(ExpectedConditions.PresenceOfElementLocated(WebElement));
+
+Wait wait = new FluentWait(WebDriver reference)
+.withTimeout(timeout, SECONDS)
+.pollingEvery(timeout, SECONDS)
+.ignoring(Exception.class);
+
+WebElement foo=wait.until(new Function<WebDriver, WebElement>() {
+public WebElement applyy(WebDriver driver) {
+return driver.findElement(By.id("foo"));
+}
+});
+
+JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+JS.executeScript("document.getElementById('User').value='SoftwareTestingMaterial.com'");
+JS.executeScript("document.getElementById('Pass').value='tester'");
+(JavascriptExecutor(driver)).executeScript("document.getElementsByClassName(ElementLocator).click();");
+
+WebElement mySelectElement = driver.findElement(By.name("dropdown"));
+Select dropdown = new Select(mySelectElement);
+dropdown.selectByVisibleText(Text);
+dropdown.selectByIndex(Index);
+dropdown.selectByValue(Value);
+
+
+package softwareTestingMaterial;
+
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class CaptureScreenshot {
+	
+	@Test
+	public static void captureScreenMethod() throws Exception{
+		System.setProperty("webdriver.gecko.driver","D://Selenium Environment//Drivers//geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.softwaretestingmaterial.com/capture-screenshot-using-selenium-webdriver");
+		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File("D:\\SoftwareTestingMaterial.png"));
+		driver.close();
+		driver.quit();		
+	}
+}
+
+
+WebElement ele = driver.findElement(By.xpath("xpath"));
+Actions action = new Actions(driver);
+action.moveToElement(ele).perform();
+
+
+@BeforeTest
+@AfterTest
+@BeforeClass
+@AfterClass
+@BeforeMethod
+@AfterMethod
+@BeforeSuite
+@AfterSuite
+@BeforeGroups
+@AfterGroups
+@Test
+
+assertEqual(String actual,String expected)
+assertEqual(String actual,String expected, String message)
+assertEquals(boolean actual,boolean expected)
+assertTrue(condition)
+assertTrue(condition, message)
+assertFalse(condition)
+assertFalse(condition, message)
+
+We use priority attribute to the @Test annotations. In case priority is not set then the test scripts execute in alphabetical order
+
+What is the use of @Listener annotation in TestNG?
+Ans. TestNG listeners are used to configure reports and logging. One of the most widely used listeners in TestNG is ITestListener interface. It has methods like onTestStart, onTestSuccess, onTestFailure, onTestSkipped etc. We should implement this interface creating a listener class of our own. Next, we should add the listeners annotation (@Listeners) in the Class which was created.
+
+How to handle browser (chrome) notifications in Selenium?
+ChromeOptions options = new ChromeOptions();
+options.addArguments("disable-infobars");
+WebDriver player = new ChromeDriver(options);
+
+package tests;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+import pages.FbHomePage;
+import pages.FbLoginPage;
+
+public class FbLoginTest extends TestBase{
+	@Test
+	public void init() throws Exception{
+			//driver.get("https://www.facebook.com");
+			FbLoginPage loginpage = PageFactory.initElements(driver, FbLoginPage.class);
+			loginpage.setEmail("rajkumarsmonline@gmail.com");
+			loginpage.setPassword("raj123456");
+			loginpage.clickOnLoginButton();
+			
+			FbHomePage homepage = PageFactory.initElements(driver, FbHomePage.class);
+			homepage.clickOnProfileDropdown();
+			homepage.verifyLoggedInUserNameText();
+			homepage.clickOnLogoutLink();	
+		}
+}
