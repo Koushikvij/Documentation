@@ -270,3 +270,17 @@ Refer official appium documentation to resolve any errors that you face
 6. Next build the app which you need to run on xcode with your real device 
 7. Then it will generate .app file
 8. Pass this path in your desired capabilities
+
+@AndroidFindBy(xpath="//android.widget.TextView[@text='Preference']"")
+public MobileElement preferenceLink;
+
+@IOSFindBy(xpath="//android.widget.TextView[@text='Preference']"")
+public MobileElement preferenceLink;
+
+public HomePage(AppiumDriver driver)
+	{
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);//AppiumFieldDecorator provides compatibility for Android and iOS
+	}
+
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Preference']") 
+	public WebElement PreferenceLink;

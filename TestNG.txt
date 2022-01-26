@@ -177,3 +177,34 @@ To access the parameters from the test, we use the @Parameters annotation
 		System.out.println(username);
 		System.out.println(password);
 	}
+	
+
+We use priority attribute to the @Test annotations. In case priority is not set then the test scripts execute in alphabetical order
+
+What is the use of @Listener annotation in TestNG?
+Ans. TestNG listeners are used to configure reports and logging. One of the most widely used listeners in TestNG is ITestListener interface. It has methods like onTestStart, onTestSuccess, onTestFailure, onTestSkipped etc. We should implement this interface creating a listener class of our own. Next, we should add the listeners annotation (@Listeners) in the Class which was created.
+
+  <Listeners>
+	<Listener class-name="com.testng.Listeners"/>
+  </Listeners>
+
+To achieve parallel execution, we need to provide parallel and thread-count attributes at the suite level.
+
+We can have parallel execution at methods, tests,instances & classes level
+
+Other values for the parallel attribute are false,true
+
+<suite name="TestSuite" parallel="methods" thread-count="10" >
+  <listeners>
+	<listener class-name="com.testng.Listeners"></listener>
+  </listeners>
+  <test name="Smoke">	
+	  <parameter name="WebURL" value="https://www.yahoo.com"/>
+	  <parameter name="MobileURL" value="https://m.yahoo.com"/>
+	  <parameter name="APIURL" value="https://api.yahoo.com"/>
+
+    <packages>
+		<package name="com.testng" />		
+	</packages>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

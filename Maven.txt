@@ -1,0 +1,83 @@
+why Maven?
+1. Central repository to get dependencies
+2. Maintaining common structure across the organization
+3. Flexibility in integrating with CI tools
+4. Plugins for Test framework execution
+
+Artifact An artifact is a file, usually a JAR that gets deployed to a Maven repository. It will more aligned with the language upon which it is built.
+This will be the project name in Eclipse
+
+GroupID - will identify your project uniquely across all projects more like a unique project id
+
+archetype:generate - generates a new project from an archetype
+
+default version is 0.0.1-SNAPSHOT
+
+package name will be groupid.artifactid
+
+Creating MAven Project
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetpeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Maven surefire plugin is used to execute all the test cases in the pom.xml file
+to get the plugin go to maven surefire documentation and click usage to get the plugin information.
+
+clean - mvn clean
+compile - mvn compile - it compiles the code and shows error if there are any.
+test - mvn test - by default it will clean and compile and then initiates the test cases
+
+mvn -Dtest=testfilename test -> is used to run a single test class file
+
+The above mvn commands needs to be used at the project level where the pom.xml file is residing.
+
+all the downloaded jars will be in c:/users/username/.m2 folder
+
+By default, the Maven algorithm will only look for class files that ends with Test.java for triggering the tests.
+
+Profiling:
+sample pom.xml
+
+<profiles>
+  	<profile>
+ 		<id>Regression</id>  
+	  	<build>
+	    	<pluginManagement>
+	      		<plugins>
+	        		<plugin>
+	          			<groupId>org.apache.maven.plugins</groupId>
+	          			<artifactId>maven-surefire-plugin</artifactId>
+	          			<version>2.20.1</version>
+	          			<configuration>
+		          			<suiteXmlFiles>
+		            			<suiteXmlFile>testng2.xml</suiteXmlFile>
+		          			</suiteXmlFiles>
+	          			</configuration>
+	        		</plugin>
+	      		</plugins>
+	    	</pluginManagement>
+	  	</build>
+  	</profile>
+  	<profile>  
+   		<id>Smoke</id>  
+  		<build>
+    		<pluginManagement>
+      			<plugins>
+        			<plugin>
+          				<groupId>org.apache.maven.plugins</groupId>
+          				<artifactId>maven-surefire-plugin</artifactId>
+          				<version>2.20.1</version>
+           				<configuration>
+          					<suiteXmlFiles>
+            					<suiteXmlFile>testng.xml</suiteXmlFile>
+          					</suiteXmlFiles>
+        				</configuration>
+        			</plugin>
+      			</plugins>
+    		</pluginManagement>
+  		</build>
+  	</profile>
+  </profiles>
+  
+to run specific profile use the following command.
+
+mvn test -PRegression
+mvn test -PSmoke
