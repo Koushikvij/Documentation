@@ -284,3 +284,28 @@ public HomePage(AppiumDriver driver)
 
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Preference']") 
 	public WebElement PreferenceLink;
+	
+
+Before running every test case, we need to start the appium server and at the end of the test case run, we need to flush the data used and stop the server.
+
+Inorder to do that we need to have the following method defined in the Base class
+
+public static AppiumDriverLocalService service;
+
+public void startServer()
+{
+	service=AppiumDriverLocalService.buildDefaultService();
+	service.start();
+}
+
+But inorder to use the above method to run, we need to include dependencies for the below list in the POM.XML
+
+slf4j-simple
+slf4j-api
+commons-lang3
+commons-io
+commons-validator
+
+taskkill /F /IM node.exe
+
+java -jar jenkins.war --enable-future-java
