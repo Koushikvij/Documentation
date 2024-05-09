@@ -1,0 +1,127 @@
+PROBLEM STATEMENT:
+	* How to evaluate the resources on a regular time period 
+	* How to effectively track the daily effort spent by the resources and use it to capture metrics
+	
+GOALS:
+	* Learning goals for the  year, focused on expanding the skill set. For example, manual testers to be encouraged to learn automation testing tool and UI automation testers to be ecouraged to learn API testing and so on
+	* Improvements in the metrics over years
+	* No escalations from clients
+	* Leave history
+	* Organizational impact/participation
+	
+METRICS:
+	Documentation		
+		- Requiements Analysis
+			* Count of stories, count of test scenarios identified (both positive and negative), effort spent
+			* effort spent on review
+			* effort spent on rework
+		- Defect creation
+			* No of defects created
+			* No of defects rejected
+			* No of defects leaked to higher env
+			* Effort spent
+			* Defect severity
+			* Defect priority
+		- Test closure report
+			* effort spent on review
+			* effort spent on rework
+	Test Execution
+		- Functional Testing
+		- Automation Script execution
+			* No of defects found		
+		- Exploratory testing
+		- Regression Testing
+		- UAT
+			* No of test cases executed
+			* No of defects found
+			* Effort spent
+			* Pass Count
+			* Fail count
+			* Block count
+	Test Design
+		- Manual Test case design
+			* No of test cases designed
+			* Test data identification
+			* Effort spent
+			* effort spent on review
+			* effort spent on rework
+		- Automation script development
+			* No of test cases designed
+			* Effort spent
+			* effort spent on review
+			* effort spent on rework
+		- Automation script maintenance
+			* No of test cases maintained
+			* Effort spent
+			* effort spent on review
+			* effort spent on rework
+	Meeting
+		- Internal team meeting
+			* Town Hall
+			* Daily sync up
+		- client team meeting 
+			* Sprint planning
+			* Sprint grooming
+			* Sprint review
+			* Sprint retrospective meetings
+			* daily stand up calls
+			* Defect Triaging
+		- Interviews
+	Training
+		- self learning via online platforms
+			* Learning Hour
+		- client suggested learnings
+		- external certifications
+	Others
+		- environment downtime
+			* hours impacted
+		- others
+ 
+	What we can derive from the tracker,
+		1. Test case design productivity (TC/PD - 8hours)
+		2. Test case execution productivity (TC/PD - 8hours)
+		3. Valid Defects found percentage to requirements
+		4. Defect leakage %
+		5. Defect Rejection rate %
+		6. Defect density against requiremnts
+		7. Test case effectiveness: The percentage of test cases that find defects. It helps assess the quality and thoroughness of the test cases.
+		8. Test Environment Availability
+		9. Test Case Failure Rate
+		10. Test case Pass rate
+		11. Test Script Maintenance Effort
+		12. Automation Stability
+		13. Exploratory Testing Effectiveness
+		14. Test Documentation Review
+		15. time spent on non core activity - all meetings outside client meetings
+	Along with this, appreciations/escalations from clients will be considered as client feedback
+	Ask the team to attach proofs
+
+RATING SYSTEM:
+	Client Projects:
+		Client feedback - 60% value (positive or negative)
+		Metrics - 25% value
+		Leave history/usage - 15% value
+	Internal Projects:
+		Metrics - 50% value
+		leave - 25% value
+		defect leakage/misses/issues caused by the resource - 25% value
+		
+	Appraisal Cycle:
+	25 ppl
+		3 ratings - 
+			1 - Exceeds expectations (25%) - 7
+			2 - Meets expectations (60%) - 15
+			3 - Needs Improvement (15%) - 3
+		5 ratings - 
+			1 - Outstanding (10%) - 2
+			2 - Exceeds Expectations (25%) - 7
+			3 - Meets Expectations (50%) - 12
+			4 - Needs Improvement (10%) - 3
+			5 - Unacceptable (5%) - 1
+	on a yearly basis
+	if a resource gets 3 or 5 rating consecutively for 2 years, he/she could be sacked
+	
+WHAT WE NEED:
+	* Creation of a portal or usage of Havana for creating this daily tracker
+	* Bring in the process to enter the daily hours 
+	* approval on this approach thereby bringing in the process oriented performance appraisal

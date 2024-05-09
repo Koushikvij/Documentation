@@ -1,0 +1,108 @@
+API - Application Programming Interface
+
+An application programming interface (API) is a way for two or more computer programs to communicate with each other. It is a type of software interface, offering a service to other pieces of software. A document or standard that describes how to build or use such a connection or interface is called an API specification. A computer system that meets this standard is said to implement or expose an API. The term API may refer either to the specification or to the implementation. In contrast to a user interface, which connects a computer to a person, an application programming interface connects computers or pieces of software to each other
+
+Why we need APIs?
+1. Integration with third party entities without exposing the underlying code/business logic. For Eg. Booking.com talking to Oyo hotels
+2. Helps to compartmentalize the different facets of software so that it will be easy during upgrades,migration (design problems). For eg., Changing the front end from Java to Angular while keeping the backend the same
+
+* API sits before the backend/business logic and provide methods by which anyone can query the backend and fetch the appropriate results. The order will be something like FRONT END -> EXTERNAL APIs -> INTERNAL APIS -> BUSINESS LOGIC/CODE -> DATABASE.
+* APIS should be independent of the language or platform like XML, JSON, FLATFILES.
+
+The most common type of API is REST(light weight protocol) which has its own set of rules and criteria to define the interface layer. Other types are SOAP services.
+
+HTTP methods which are commonly used to communicate with Rest API’s are
+
+GET, POST, PUT, and DELETE otherwise called CRUD operations.
+
+1. END POINT/BASE URI - The server where the API is hosted
+2. GET (Retrieve)- method used to extract/retrieve information from the given server using a given URI. While using GET request, it should only extract data and should have no other effect on the data.No Payload/ Body required.
+3. POST (Create)- A POST request is used to send the data to the server, for example, customer information, file upload etc, using HTML forms. Using form parameters/ body payload, we can send information using the POST method
+4. PUT (Update)- Replaces all current representations of the target resource with the uploaded content
+5. DELETE (Delete)- Removes all current representations of the target resource given by a URI
+6. RESOURCES - Resources represent the API/Collection which can be accessed from the Server. For Example, in "google.com/maps", "google.com" is the BASE URL and "maps" is the resource
+7. PATH PARAMETERS - These are the variable parts of the URL. They are typically used to point to a specific resource within a collection, such as user identified by an ID (sub resource). For example, in https://www.amazon.com/orders/112, 112 is the 112th order in the list of orders
+8. QUERY PARAMETERS - It is used to sort or filter the resources . Query parameters are identified with "?" symbol. For example, in https://www.amazon.com/orders?sort_by=2/20/2020&sort_by_type=Price_Low_To_High, we are getting the list of orders based on a specific date.
+9. HEADERS/COOKIES - Headers represent the meta-data associated with the API request and response. In layman terms, we were sending Additional details to API to process our request. For example the authorization details 
+
+BASIC API STRUCTURE -> BASE URL/RESOURCE/(QUERY/PATH) PARAMETERS
+
+######################################################################
+
+POSTMAN
+
+PostMan has a powerful JavaScript editor which helps to test APIs using multiple datasets using parameterization concepts
+PostMan supports REST APIs, SOAP requests and GraQL requests as well
+With the help of NewMan tool, we can run automated test cases from command line interface CLI and can also be integrated into CI/CD pipeline
+
+
+PostMan supports 5 scopes of variables
+ 1. Global
+ 2. Collection
+ 3. Environment
+ 4. Data
+ 5. Local
+ 
+PostMan supprot pre-request and test steps for all requests. They are basically JavaScript editors which can be used to send information before and after the request respectively.
+Pre request is used to populate the data to be sent as part of the request body whereas Test is used to perform assertions and validations on the response
+
+All the postman javascript functionality can be used with "pm" object
+pm.test("validation description", function()
+{
+pm.response.to.have.status(200);
+})
+
+Refer this vairable list for pre request scripting
+
+https://learning.postman.com/docs/writing-scripts/script-references/variables-list/
+
+To execute using newman use the following command:
+
+newman run collections.json -d datafile.csv -g globalvariable.json -e environmentVariable.json -r htmlextra 
+
+the above command runs the collections and puts the html report in a folder called newman. If you want to specify a new export location for the html report use the below command,
+
+newman run collections.json -d datafile.csv -g globalvariable.json -e environmentVariable.json -r htmlextra --reporter-htmlextra-export ./results/report.html
+
+
+*****USEFUL URLS*****
+
+https://www.liquid-technologies.com/online-json-to-schema-converter
+https://www.liquid-technologies.com/online-schema-to-json-converter
+https://www.liquid-technologies.com/online-json-to-schema-converter
+https://learning.postman.com/docs/writing-scripts/script-references/variables-list/
+HTML REPORT FOR NEWMAN EXECUTION - https://www.npmjs.com/package/newman-reporter-htmlextra
+
+*****QUESTION & ANSWER*****
+Q: Suppose i have a local variable, an environment variable, a collection variable and a global variable with the same name, what is the order of perference from PostMan?
+A: 1. Local 2. Environment 3. Collection 4. Global
+
+Q: What is the execution order of the scripts in postman
+A: A pre-request script  will be executed before the request and the test request will be executed after the request is sent and response is obtained
+
+Q: When to use pre request and test sections in postman?
+A: Pre request is used to populate the data to be sent as part of the request body whereas Test is used to perform assertions and validations on the response
+
+Q: How to set data to the request body?
+A: Use pre request script to generate the test data, set the data to global, collection or environment variable based on need and then refer to the variable in the request body
+
+Q: How to pss property from one request to another?
+A: Use Test script to fetch the data from the response body, validate it and then populate global, collection or environment variable based on need  and then refer the variable in the other requests
+
+Q: What are the most commonly used grant types in OAuth 2.0?
+A: Authroization codes and Client credentials are the two of the most commonly used grant types in OAuth 2.0
+
+Q: How to perform api testing on OAuth2.0 websites ?
+A:	1. User sign into the google/facebook/microsoft authorization server and get the unique code for the session
+	2. Use the application code to hit the google/facebook/microsoft resource server to fetch the access token which enables us to see the user details (first name, last name, email id, phone number, display picture.. etc)
+	3. Application grants access by validating the access token 
+	4. Perform the funtional api testing
+
+Q: What all we need to provide to google for generating the OAuth2.0 access token?
+A: The request should have scope, auth_url, client_id, response_type(code), redirect_uri, state(optional used for security purposes)
+
+Q: What all we need to provide to get the resource information when using OAuth2.0?
+A: The request should have code, client_id, client_secret, redirect_uri, grant_type (authorization_code or client_credentials)
+
+Q: What is the difference between RestAPI and Soap Webservices?
+A: Rest API uses HTTP Protocol to send and receive the request and responses whereas soap services uses soap protocol which send the requests and responses in XML format

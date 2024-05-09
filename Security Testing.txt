@@ -1,0 +1,398 @@
+What is Security Testing?
+Security Testing is a type of Software Testing that uncovers vulnerabilities, threats, risks in a software application and prevents malicious attacks from intruders. The purpose of Security Tests is to identify all possible loopholes and weaknesses of the software system which might result in a loss of information, revenue, repute at the hands of the employees or outsiders of the Organization.
+
+Why Security Testing is Important?
+The main goal of Security Testing is to identify the threats in the system and measure its potential vulnerabilities, so the threats can be encountered and the system does not stop functioning or can not be exploited. It also helps in detecting all possible security risks in the system and helps developers to fix the problems through coding.
+
+Goal of Security Testing: The goal of security testing is to:
+
+To identify the threats in the system.
+To measure the potential vulnerabilities of the system.
+To help in detecting every possible security risks in the system.
+To help developers in fixing the security problems through coding.
+Principle of Security Testing: Below are the six basic principles of security testing:
+
+Confidentiality
+Integrity
+Authentication
+Authorization
+Availability
+Non-repudiation
+
+Major Focus Areas in Security Testing:
+Network Security
+System Software Security
+Client-side Application Security
+Server-side Application Security
+
+Types of security:
+
+Vulnerability Scanning: This is done through automated software to scan a system against known vulnerability signatures.
+
+Security Scanning: It involves identifying network and system weaknesses, and later provides solutions for reducing these risks. This scanning can be performed for both Manual and Automated scanning.
+
+Penetration testing: This kind of testing simulates an attack from a malicious hacker. This testing involves analysis of a particular system to check for potential vulnerabilities to an external hacking attempt.
+
+Risk Assessment: This testing involves analysis of security risks observed in the organization. Risks are classified as  Low, Medium and High. This testing recommends controls and measures to reduce the risk.
+
+Security Auditing: This is an internal inspection of Applications and Operating systems for security flaws. An audit can also be done via line by line inspection of code
+
+Ethical hacking: It’s hacking an Organization Software systems. Unlike malicious hackers, who steal for their own gains, the intent is to expose security flaws in the system.
+
+Posture Assessment: This combines Security scanning, Ethical Hacking and Risk Assessments to show an overall security posture of an organization.
+
+Cloud Security - Stop cloud breaches with unified cloud security
+posture management and breach prevention
+
+Endpoint Security & XDR - Supercharge protection, detection and
+response – for endpoint and beyond. Real-time threat protection, detection and automated response to combat threats and stop breaches anywhere and everywhere
+
+
+Identity protection - A full 80% of all breaches use compromised identities. Stop breaches faster by protecting workforce identities everywhere.
+
+Security & IT operations - Unmatched real-time visibility into the devices, users and applications in your network.
+
+Threat intelligence - Supercharge your SOC and Incident Response teams with built-in adversary intelligence. Integrate threat intelligence into endpoint protection, expose threats outside the perimeter
+and gain access to industry-leading, adversary-focused research
+
+Observability - Enhance visibility of your infrastructure with unrivaled speed and scale
+
+Assessments:
+1. Cyber Security Maturity Assessment - Evaluate your security posture and identify gaps which could be exploited by threat actors 
+	CHALLENGE - Given the complexity of today’s evolving threat landscape, organizations are faced with an important question: How capable are you at preventing, detecting and responding to today’s most advanced adversaries? Most organizations struggle with these challenges.
+	
+	TIME AND RESOURCES - Organizations lack the time and resources needed to conduct a thorough evaluation of their capabilities. For many, keeping up with day-to-day security operations is more than they can handle, straining limited resources and budgets.
+	
+	EXPERTISE - Organizations lack the expertise and experience to conduct an objective and detailed assessment of their capabilities. Staff may not be fully up to speed on the latest threat landscape, or in many cases, the organization may not trust its staff’s findings without the support of an outside expert.
+	
+	THEORY VS. REALITY - Existing internal documentation and processes may be misleading because playbooks and other documentation have not been updated to reflect changes in the threats the organization faces, and in the security tools and technologies that have been deployed.
+	
+	FOCUS - Although executives and board members may recognize cyber threats as a top risk facing their organization, a deeper understanding of what this means is often missing. The types of threats and their impact can vary greatly, and even those organizations that recognize the risk can get stuck in an endless audit and compliance struggle — unable to see the forest for the trees.
+
+	BENEFITS:
+		* GAP ANALYSIS - Identify gaps in your cyber security program across people, processes and technology
+		* MATURITY ASSESSMENT - Determines how mature your organization is today and provides guidance on what level of maturity you should strike for
+		* COMPARATIVE RATING - Provides a comparison of your rating level across similar organizations facing similar challenges and risks
+		* ACTION PLAN - Identifies areas where you can improve your organization's security posture and how you should prioritize them
+		
+2. TECHNICAL RISK ASSESSMENT - Technical Risk Assessment provides improved visibility into applications, accessibility and account management within your network, identifying vulnerabilities, missing patches, unprotected devices and weak security settings so you can proactively safeguard your network before a breach occurs
+	CHALLENGE - Common IT misconfigurations continue to be the root cause of many security breaches. Groups with too many permissions, unpatched systems, unprotected endpoint devices and excessive administrative rights are frequently exploited by hackers.
+
+	WEAK IT SETTINGS - Hackers constantly try to exploit weak IT configuration settings.
+
+	COMMON IT MISCONFIGURATIONS - Common IT misconfigurations continue to be the root cause of many security breaches.
+
+	EXCESSIVE ACCESS RIGHTS - Groups with too many permissions and excessive administrative rights are exploited by hackers.
+
+	BENEFITS:
+		* Enhanced Cybersecurity Posture - Proactively strengthen your cybersecurity posture across your entire IT network.
+		* Visibility to IT Assets - Gain real-time and historical visibility into assets and applications running in your network’s environment.
+		* Discovery of User Privileges - Discover user activity and hidden privileged accounts within your Active Directory.
+
+3. SECURITY OPERATIONS CENTER ASSESSMENT - Security Operations Center (SOC) Assessment helps organizations quickly understand the maturity level of their security monitoring and incident response capabilities and shows how to take them to the next level.
+	CHALLENGE - The sheer volume of security events, incidents and false positives means security teams are already over extended and wading through a sea of alerts, and unable to afford the time to review their security posture and implement positive changes.
+
+	RESOURCE AVAILABILITY - Resource and availability are often a challenge when trying to assess the current posture of SOC capabilities.
+
+	UNKNOWN GAPS - It can be difficult to realize the gaps that exist, when you become embedded in a daily routine of alert fatigue.
+
+	LATEST TRENDS - Keeping up with the latest trends, technologies, processes and intel becomes a luxury few can afford.
+
+	BENEFITS:
+		*IN-DEPTH ASSESSMENT OF OPERATIONS - An in-depth assessment helping to identify gaps in your cybersecurity operations and incident response program.
+
+		* ENHANCEMENT THROUGH BEST PRACTICES - Determines how mature your organization is today and provides guidance on achieving your desired future state of security operations.
+		
+		* REDUCE ORGANIZATIONAL SECURITY RISK - Provides a detailed prioritized plan to reduce your organizational security risk with impactful improvements to operations.
+		
+4. ACTIVE DIRECTORY SECURITY ASSESSMENT - Active Directory Security Assessment is a unique offering designed to review Active Directory configuration and policy settings to assess security configuration issues attackers can leverage, and then recommend steps for mitigation and remediation
+	CHALLENGE - Simply put, Active Directory contains the “keys to the kingdom,” and if not well protected, it will compromise your organization’s security.
+
+	VISIBILITY AND CONTROL - Many organizations lack good visibility and control of their Active Directory infrastructure, leaving them susceptible to attacks.
+
+	WEAK POLICIES - Poorly configured Active Directory policy settings expose your environment to potential threats.
+
+	MISCONFIGURATION - Identifying vulnerabilities and misconfigurations in your Active Directory infrastructure is critical to your security.
+
+	BENEFITS:
+		* IDENTIFY COMMON ATTACK VECTORS - Identifies the most common and effective attack vectors and explains how best to detect, mitigate and prevent them
+
+		* CUSTOMIZE TO MEET BUSINESS NEEDS - Customizes Active Directory security best practices to align with business processes and requirements and minimize impact
+
+		* DELIVER A PLAN OF ACTION - Delivers a plan of action that includes resolution and mitigation recommendations for the identified issues
+
+5. COMPROMISE ASSESSMENT - Identify current or past threat activity missed by the silent failure of existing security technology with a Compromise Assessment.
+	CHALLENGE - Traditional cybersecurity solutions fail to identify today’s advanced persistent threats, allowing attackers to go undetected while they move laterally across your systems exfiltrating data and intellectual property.
+
+	SILENT FAILURE - For many organizations, the time to detection for an intrusion or attack can be prolonged due to blind spots and silent failure of their current cybersecurity solutions.
+	
+	BREAKOUT TIME - Today’s sophisticated attackers can breach your network and breakout across your systems in as little as 20 minutes to achieve lateral movement without detection.
+
+	TACTICS - The threat landscape continues to evolve with stealthy, sophisticated attacks regularly evading the security technology and expertise of many organizations.
+
+	BENEFITS:
+		* MINIMIZE DWELL TIME - Learn if attackers have breached your defenses and are moving unnoticed in your environment.
+
+		* REDUCE RISK - Receive a thorough analysis that reduces the risk of attackers stealing financial assets, customer data or intellectual property.
+
+		* IMPROVE SECURITY - Proactively identify ineffective security practices that are putting your organization at greater risk.
+
+6. INCIDENT RESPONSE
+Stop active breaches and accelerate digital forensic investigations with Incident Response Services.
+
+	CHALLENGE - Organizations are faced with a wide range of potential threats, and CrowdStrike Services is here to help you detect, contain and investigate them.
+
+	INTELLECTUAL PROPERTY (IP) THEFT - Theft of trade secrets, ideas, inventions, creative expressions or other sensitive information, often by sophisticated nation-state-sponsored actors
+
+	FINANCIALLY MOTIVATED CRIME - Payment card theft, extortion, ransomware and more
+
+	DESTRUCTIVE ATTACKS - Ranging from targeted destructive malware deployed by sophisticated threat actors to malware causing business disruption
+
+	DATA BREACHES - Exposure of personally identifiable information (PII) or Personal Health Information (PHI) that could potentially expose a specific individual(s) or customer(s) of your business
+
+	BENEFITS - CrowdStrike’s IR approach combines the industry-leading CrowdStrike Falcon® platform along with an experienced team of responders to provide the following:
+
+		* SPEED AND EFFICACY - CrowdStrike consultants’ skills and experience, combined with proven methodology and technology, allow the team to respond and contain incidents faster and more efficiently. The result: fewer hours incurred, less business interruption and lower costs to you.
+
+		* INTELLIGENCE-LED INVESTIGATION - The IR team is supported throughout the response by the CrowdStrike Intelligence team. As a pioneer in adversary analysis, it helps identify adversaries present in the environment, enabling the IR team to quickly and efficiently contain the incident.
+
+		* TAILORED APPROACH - CrowdStrike partners with you to develop a plan that takes into consideration your operational needs, as well as existing investments and resources, ensuring a thorough investigation and a customized remediation action plan.
+
+		* TOOLS AND TECHNOLOGY - The same Falcon endpoint technology, cyber threat intelligence and proactive managed hunting services used in the IR investigation are available to you in the future, ensuring that you can both improve your security posture and stop future breaches.
+
+7. ENDPOINT RECOVERY - Recover from a breach with speed and precision and get back to business faster with CrowdStrike®️ Endpoint Recovery Services.
+
+	CHALLENGE - When a breach occurs, speed to remediation and recovery is critical to minimize the impact on business operations. Advanced persistent threats can quickly break out across your network, infecting your endpoints, moving laterally across your systems and disrupting your business.
+
+	PERSISTENT ATTACKS - Sophisticated cyberattacks often establish multiple points of undetected persistence in your network in order to infect your systems with malware or steal sensitive data over a prolonged period of time.
+
+	ADVANCED THREATS - The threat landscape continues to evolve, with stealthy, sophisticated attacks regularly evading the security technology and expertise of many organizations.
+
+	BUSINESS INTERRUPTION - Traditional recovery methods from advanced persistent threats rely on reimaging and rebooting endpoints from backup images, which can disrupt the end users and cause business downtime.
+
+	BENFITS:
+		* STOP ATTACKS IMMEDIATELY - Immediately eradicate threat actors and prevent any further attempts to compromise the environment.
+
+		* RECOVER ENDPOINTS RAPIDLY - Rapidly identify persistence vectors and mass remediate malicious artifacts with speed and precision.
+
+		* MINIMIZE BUSINESS DISRUPTION - Restore normal business operations efficiently and effectively without having to reimage or reissue devices.
+		
+8. NETWORK SECURITY MONITORING - CrowdStrike Falcon® Network as a Service provides an extensive network security monitoring capability for detection, response and threat hunting.
+
+	CHALLENGE - Identify threat actors actively trying to gain access to endpoints on the network or threatening the health and stability of the network itself through denial-of-service (DoS) attacks.
+
+	NETWORK INTRUSION - Traditional intrusion detection systems are not enough, you need to know what is connected to your network at all times and what endpoints might be vulnerable.
+
+	DOS ATTACKS - These are targeted attacks that flood the network with false requests and cause a denial of service to critical business operations.
+
+	UNPROTECTED DEVICES - The internet of things (IoT) and other critical manufacturing or medical devices, which lack the protection of traditional endpoints, are susceptible to attacks over the network.
+
+	BENEFITS:
+		* VISIBILITY - Provides visibility across your entire network, analyzing network traffic and hunting for threats.
+
+		* HUNTING - Highly skilled and experienced analysts proactively hunt through network metadata to detect new and unknown attacks.
+
+		* EFFICACY - Utilizes multifaceted detection mechanisms to detect known and unknown threats and unusual network behavior.
+
+		* EASE - Is an easy-to-use physical or virtual appliance that delivers frictionless deployment.
+
+PEOPLE SECURITY:
+1. Criminal background checks - Criminal background checks are the backbone of candidate screenings. Understand your candidate’s criminal history with fast and reliable data.
+
+	Why criminal background checks are important
+	Criminal background checks for employment search national and local records to identify any reportable criminal records associated with your candidates.
+
+	* Confirm candidate eligibility and fit - A criminal background check gives you a more complete picture of your candidate before you hire.
+
+	* Understand organizational risk - Protect your brand’s reputation and reassure customers and employees of workplace safety.
+
+	* Stay compliant - Depending on your industry, certain criminal offenses may make a candidate ineligible for a role.
+
+	* Felony criminal convictions - Generally, felonies are more serious crimes and carry more severe penalties and long-term consequences.
+
+	* Misdemeanor criminal convictions - Typically lower level offenses punishable by shorter jail time, fines, probation or community service.
+
+	* Infractions or violations - Depending on the jurisdiction, petty offenses may or may not show up on a criminal history check
+
+2. Employment verification
+	Why employment verification checks are important - Get additional insight into your candidate’s work history. An employment verification background check helps you: 
+
+	Hire qualified candidates - Make informed decisions and feel confident you’re hiring skilled, experienced candidates.
+
+	Verify previous positions held - Confirm the information provided by your candidate is true, and identify any employment gaps.
+
+	Mitigate risk to your business - Hiring a candidate with false credentials could pose a risk to your company’s reputation, or worse.
+
+	What you’ll learn from employment history checks - Employment history checks confirm important details provided on a resume or application are accurate, such as:
+
+	Position or title - Get more insight into your candidate’s level of experience by verifying their position.
+
+	Dates of employment - Check the length of employment and accuracy of each positions’ start and end dates.
+
+	Employment status - Check the length of employment and accuracy of each positions’ start and end dates.
+
+3. MVR and driving record checks - Safety on the road is a top priority. Understand your candidates’ driving history and license status with easy-to-review MVR reports that are fast and reliable.
+	
+	The importance of MVR checks - An MVR check helps your organization maintain compliance, protect your brand reputation, and assure your customers of safety.
+
+	Maintain safety protocols - Identify qualified candidates with safe driving records to help protect your customers, employees and the public.
+
+	Comply with regulations - Meet the safe driving standards and requirements set forth by your organization and industry, if applicable. 
+
+	Mitigate risk - Protect your organization against liability claims and higher insurance premiums.
+	
+	What you’ll learn from driving record checks - A driving record check provides important information about a candidate’s driving history, safety record, and eligibility to drive as part of their job.
+
+	Legal ability to drive - Find out if your candidate is legally allowed to drive, or if their license is suspended or expired.
+
+	Class of license - Learn what types of motor vehicles a person is licensed to operate, such as commercial and noncommercial.
+
+	Safety record - Get insight into safe and unsafe driving practices by reviewing minor and serious traffic violations.
+	
+4. Pre-employment drug testing - Maintain a safe and productive work environment by implementing an employment drug testing program
+	Top reasons employers conduct drug testing - For many industries and organizations, pre-employment drug testing helps maintain a safer, more productive work environment. Here are three reasons to drug test for employment:
+
+	Promote high standards of safety - Pre-employment and routine drug testing protects the safety, health, and welfare of employees and customers.
+
+	Comply with regulations - Industry-specific laws and regulations, as well as your corporate policy, may require drug testing.
+
+	Lower workers’ compensation rates - Drug screening helps prevent on-the-job accidents and injuries related to alcohol or drug use.
+
+	Why drug testing is important - The nation’s ongoing crisis of illegal substance abuse makes drug screening for employment a growing focus for employers across the country. A drug screening program helps:
+
+	Prevent drug use on the job - Routine drug screening helps ensure employees remain free of substance abuse on and off the job.
+
+	Reduce absenteeism and turnover - Drug-free workplace policies can reduce absenteeism and improve productivity and worker retention.
+
+	Safeguard assets - Drug testing may help prevent fraud, embezzlement, or other forms of workplace theft to fund an addiction problem.
+
+5. Education verification - An education verification background check helps confirm your candidate has the knowledge, skills and abilities required for the position. Let Checkr take the hassle out of checking your candidate’s education history.
+
+	Why education verification background checks are important
+	Hire qualified candidates - Certain positions require a formal education or degree; confirm your candidate’s knowledge, skills and ability.
+
+	Identify any discrepancies - Certain positions require a formal education or degree; confirm your candidate’s knowledge, skills and ability.
+
+	Mitigate risk to your business - Education verification mitigates the risk of hiring a candidate with false education credentials and protects against liability claims.
+
+	What you’ll learn from education verification - Checkr helps with education verification at high schools, universities, colleges, and vocational schools.
+
+	Enrollment and attendance - Verify your candidate’s enrollment history and dates of attendance.
+
+	Degree obtained - Validate the type of degree, such as a Bachelor’s degree, and major completion status.
+
+	Graduation date - Confirm the graduation date provided by your candidate is accurate. 
+	
+6. International background checks - Run background checks in 200+ countries through a single platform. Quickly scale your hiring around the world and minimizes the complexity of constantly-evolving local regulations related to background checks.
+
+	The importance of international background checks - Whether you’re expanding globally or seeking candidates with international experience, including international background checks benefits your organization.
+
+	Maintain compliance - It’s important to be consistent with your company’s screening policy and conduct screenings on all new hires.
+
+	Mitigate risk - Protect your company, customers and employees by hiring trustworthy, qualified candidates.
+
+	Make informed decisions - Understand your candidate’s complete background, no matter where they’ve lived, before you hire.
+
+	What you’ll learn from international background checks - Get a complete picture of your candidate’s background, no matter where they’ve lived, studied, or worked.
+
+	Check employment history - Verify each previous international employer listed to confirm dates of employment and titles or positions.
+
+	Verify education credentials - Confirm attendance dates as well as degrees, diplomas, or certificates earned in the US or one of 200+ countries.
+
+	Understand criminal history - Review criminal records returned for the country selected as well as possible inclusion on a global watchlist.
+	
+TEST DATA SECURITY
+
+Challenge - Production data contains sensitive information like Credit Card Numbers, SSN Numbers, E-mail IDs, Telephone numbers, Zip Codes, address, first names and last names, Net Assets, Bank Account Numbers, Account Balances, etc.
+
+Best Practice – Masking
+	* Intelligent Masking - Mask key fields to a different but yet structurally valid values
+	* Dynamic generation for each field
+	* Credit Card Number generation based on Luhn’s algorithm
+	* SSN Numbering scheme (Area, Group) for SSN Number generation
+	* DSN logic for Email IDs
+	* All other sensitive fields (eg. First Names, Last Names) based on valid pre-defined seed values
+	* Use any or a combination of the standard scrubbing techniques for other fields – Randomize,  Sequence, Shuffling, Substitution, Blurring, Selective data masking, Nulling, etc.
+
+Goal of Security Testing: The goal of security testing is to:
+
+To identify the threats in the system.
+To measure the potential vulnerabilities of the system.
+To help in detecting every possible security risks in the system.
+To help developers in fixing the security problems through coding.
+Principle of Security Testing: Below are the six basic principles of security testing:
+
+Confidentiality
+Integrity
+Authentication
+Authorization
+Availability
+Non-repudiation
+Major Focus Areas in Security Testing:
+
+
+Network Security
+System Software Security
+Client-side Application Security
+Server-side Application SecurityGoal of Security Testing: The goal of security testing is to:
+
+To identify the threats in the system.
+To measure the potential vulnerabilities of the system.
+To help in detecting every possible security risks in the system.
+To help developers in fixing the security problems through coding.
+Principle of Security Testing: Below are the six basic principles of security testing:
+
+Confidentiality
+Integrity
+Authentication
+Authorization
+Availability
+Non-repudiation
+Major Focus Areas in Security Testing:
+
+
+Network Security
+System Software Security
+Client-side Application Security
+Server-side Application Security
+
+
+Drafting a comprehensive security policy is crucial for any IT company to protect its assets, data, and reputation. Here are some key elements to include when creating a security policy:
+
+1. **Introduction and Purpose:** Begin with a clear statement of the policy's purpose and the importance of information security within the company. Highlight the role of employees and stakeholders in maintaining a secure environment.
+
+2. **Scope:** Define the scope of the security policy, including the systems, devices, networks, and data that the policy covers. Specify which employees or departments are subject to the policy.
+
+3. **Roles and Responsibilities:** Clearly outline the roles and responsibilities of employees, IT staff, management, and any other relevant parties in maintaining security. Designate individuals responsible for various security aspects and incident response.
+
+4. **Security Standards:** Enumerate the security standards that must be followed throughout the organization. This may include industry best practices, compliance regulations (e.g., GDPR, HIPAA, ISO 27001), and any specific company policies.
+
+5. **Access Controls:** Define guidelines for granting and revoking access to various systems, applications, and data. Implement the principle of least privilege, where employees only have access to the minimum resources required for their job roles.
+
+6. **Password Policy:** Establish guidelines for creating strong passwords, password rotation, and how to securely store and manage passwords.
+
+7. **Data Protection:** Address data classification and handling procedures. Specify how sensitive data should be stored, transmitted, and disposed of securely.
+
+8. **Remote Work and Bring Your Own Device (BYOD):** If applicable, outline security measures for remote work and personal devices used for work purposes.
+
+9. **Network Security:** Detail measures to protect the company's network infrastructure, including firewalls, intrusion detection/prevention systems, and regular security updates.
+
+10. **Incident Response Plan:** Develop a detailed incident response plan that outlines how security incidents will be identified, reported, analyzed, and resolved. Include steps for communication, escalation, and recovery.
+
+11. **Security Awareness Training:** Emphasize the importance of ongoing security awareness training for all employees. Educate them on potential risks, social engineering attacks, and safe computing practices.
+
+12. **Physical Security:** If relevant, address physical security measures to protect the company's premises, servers, and equipment.
+
+13. **Monitoring and Auditing:** Explain how security measures will be monitored, and audits conducted to ensure compliance with the policy and identify potential vulnerabilities.
+
+14. **Vendor and Third-Party Management:** If the company works with external vendors or third parties, include guidelines on how they should adhere to security practices.
+
+15. **Business Continuity and Disaster Recovery:** Address measures to ensure business continuity in case of a security breach or disaster, including data backups and recovery procedures.
+
+16. **Compliance and Consequences:** Clearly state the consequences of policy violations, which may include disciplinary actions, termination, or legal consequences.
+
+17. **Policy Review and Updates:** Specify how often the policy will be reviewed, updated, and communicated to employees.
+
+18. **Acceptance and Acknowledgment:** Require all employees to acknowledge their understanding of the policy and their commitment to comply with it.
+
+Remember that a security policy should be tailored to your company's specific needs and risks, so consider involving relevant stakeholders and experts in the process of drafting and implementing the policy. Regularly review and update the policy to keep up with changing threats and technology.

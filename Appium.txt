@@ -38,8 +38,8 @@ INSTALLATIONS:
 	C:\Users\Kakarot\AppData\Local\Android\Sdk\emulator
 	C:\Program Files\nodejs
 	C:\Program Files\nodejs\node_modules\npm\bin
-	%MAVEN_HOME%/bin
-	%JAVA_HOME%/bin
+	%MAVEN_HOME%\bin
+	%JAVA_HOME%\bin
 	
 	Node is the software whereas NPM is a commandline installer used to download and install node modules like Appium, AngularJS, Protractor
 5. MACOS->

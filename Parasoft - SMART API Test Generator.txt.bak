@@ -1,0 +1,47 @@
+How to use Parasoft SMART API Test Generator
+	1. Parasoft recorder chrome extension is installed which forwards the network traffic to the SOATest Web Proxy server
+	2. The SOATest Web Proxy server then will store the details in a file and provide it to SOATest
+	3. SMART AI will then parse the traffic to find patterns in the traffic to understand which API calls are dependent on one other
+	
+What is the use of SMART API Test Generator
+	It allows  users to convert the manual UI test cases into automated API test cases
+	
+How to configure the Parasoft recorder?
+	1. Provide the Web Proxy API port. The default is 40090
+	2. Provide the SOATest Server host machine address. For local machine provide localhost
+	3. Provide the SOATest Server port number
+	4. Provide the user name and password in case of remote server which houses the SOATest
+	5. Click Save
+	
+The recorded test (.tst) file can be found in Test Assets
+
+Where can we find the tst creation configuration files?
+	The TST configuration file can be found in {$base_workspace}/TestAssets/test_templates and the file names will be tst_creation.properties, salesforce_tst_creation.properties, guidewire_tst_creation.properties for the general, salesforce and guidewire applications respectively.
+	
+What are filter properties?
+	Filters are necessary for removing network noise during the creation of the test asset. They can either exclude all traffic that are not matching the filter value or include only those traffic matching the providing value/configuration.
+	
+	excludeURLPatterns=*.google.com/**
+	includeURLPatterns=http://path:8080/Parabank/**
+	excludeContentTypes=XML
+	includeContentTypes=JSON
+
+What are validation properties?
+	These are a variety of properties for specifying what type of validation tools should be added during test generation and what type of data those tools should validate
+	
+	disableDiffCreation=false	** This means that the Diff tools to test during creation will be true
+	disableAssertorCreation=false	** This means that the Assertor tools to test during creation will be true
+	diffToolIgnoreNames.1=(?i)^(time|data|url|href).*
+	diffToolIgnoreNames.2=(?i)^(time|data|url|href)$
+	diffToolIgnoreValues.1=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,3})?(([+-][0-9]{2}:[0-9]{2})|Z)?
+	assertorToolIgnoreQueryParameterNames.1=(?i)^(maxResultSize).*
+	assertorToolIgnoreQueryParameterValues.1=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,3})?(([+-][0-9]{2}:[0-9]{2})|Z)?
+	assertorToolIgnoreFieldNames.1=(?i)^(time|date|url|href|SessionId|transactionid).*
+	assertorToolIgnoreFieldValues.1=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,3})?(([+-][0-9]{2}:[0-9]{2})|Z)?
+	version=x	**2020.2 means version = 2
+	userServerSettings
+	includeTextResponseValues.1=queryName=([-A-Za-z0-9%?&_=+./]{10,})&nextQuery
+	includeTextResponseContentTypes=text/html,text/plain
+	requestQueryStringParameterizationExcludeNames.1=^requestId$
+	requestPayloadParameterizationExcludeNames.1=(?i)^(time|date).*
+	
